@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:spacex_rocket/data/rocket.dart';
 import 'package:spacex_rocket/services/rocket_service.dart';
 
-class RocketPage extends StatefulWidget {
-  const RocketPage({super.key});
+class RocketArguments {
+  final Rocket rocket;
 
-  @override
-  State<RocketPage> createState() => _RocketPageState();
+  RocketArguments({required this.rocket});
 }
 
-class _RocketPageState extends State<RocketPage> {
+class RocketPage extends StatelessWidget {
+  static const routeName = '/rocketPage';
+  const RocketPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
